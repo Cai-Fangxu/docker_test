@@ -20,8 +20,8 @@ RUN apt-get -y install htop
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy
-RUN pip install --no-cache-dir tqdm
+RUN pip install --no-cache-dir networkx tqdm
+RUN pip install --no-cache-dir --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
